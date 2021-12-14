@@ -6,3 +6,6 @@
 
 ## chapter03
 - [정리 및 느낀점](https://github.com/YeomJaeSeon/TDD/blob/main/src/summary/chap03/chap03_summary.md)
+
+## chapter04
+- [정리 및 느낀점](https://github.com/YeomJaeSeon/TDD/blob/main/src/summary/chap04/chap04_summary.md)
