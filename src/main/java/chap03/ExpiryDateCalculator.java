@@ -1,4 +1,4 @@
-package test.java.chap03;
+package main.java.chap03;
 
 import java.time.LocalDate;
 import java.time.YearMonth;
