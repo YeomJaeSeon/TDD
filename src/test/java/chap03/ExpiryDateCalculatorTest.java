@@ -13,6 +13,7 @@ public class ExpiryDateCalculatorTest {
     // == 예외상황 - 이것도 우선적으로 테스트해야함 == //
     @Test
     void 납부일과_한달_뒤_일자가_같지_않음(){
+        System.out.println(this); // 진짜 테스트 @Test애너테이션 붙은 메서드 실행할때마다 새로운 테스트 클래스의 객체(인스턴스)를 생성하는 구나
         assertExpiryDate(
                 PayData.builder()
                         .billingDate(LocalDate.of(2019, 1, 30))
@@ -44,6 +45,7 @@ public class ExpiryDateCalculatorTest {
     // == 가장 쉬운상황 - 이거부터 테스트함  ==//
     @Test
     void 만원_납부하면_한달_뒤가_만료일이_됨(){
+        System.out.println(this);
         assertExpiryDate(
                 PayData.builder()
                         .billingDate(LocalDate.of(2021, 12, 13))
@@ -65,6 +67,8 @@ public class ExpiryDateCalculatorTest {
 
     @Test
     void 첫_납부일과_만료일의_날짜가_다를때_만원_납부하면_다음_만료일은_첫납부일과_날짜가_같음(){
+        System.out.println(this);
+
         PayData payData = PayData.builder()
                 .firstBillingDate(LocalDate.of(2019, 1, 31))
                 .billingDate(LocalDate.of(2019, 2, 28))
@@ -92,6 +96,8 @@ public class ExpiryDateCalculatorTest {
 
     @Test
     void 이만원_이상_납부시_비례해서_만료일_계산(){
+        System.out.println(this);
+
         assertExpiryDate(
                 PayData.builder()
                         .billingDate(LocalDate.of(2019, 3, 1))
@@ -127,6 +133,8 @@ public class ExpiryDateCalculatorTest {
 
     @Test
     void 첫_납부일과_만료일_날짜가_다를때_2만원_이상_납부(){
+        System.out.println(this);
+
         assertExpiryDate(
                 PayData.builder()
                         .firstBillingDate(LocalDate.of(2019, 1, 31))
@@ -158,6 +166,8 @@ public class ExpiryDateCalculatorTest {
 
     @Test
     void 십만원_납부하면_1년_서비스_제공(){
+        System.out.println(this);
+
         assertExpiryDate(
                 PayData.builder()
                         .billingDate(LocalDate.of(2019, 1, 28))
@@ -177,6 +187,8 @@ public class ExpiryDateCalculatorTest {
 
     @Test
     void 십만원_이상_납부하면_1년서비스제공이_추가됨(){
+        System.out.println(this);
+
         assertExpiryDate(
                 PayData.builder()
                         .billingDate(LocalDate.of(2019, 1, 1))
@@ -204,6 +216,8 @@ public class ExpiryDateCalculatorTest {
 
     @Test
     void 윤달_마지막날에_10만원_납부(){
+        System.out.println(this);
+
         assertExpiryDate(
                 PayData.builder()
                         .billingDate(LocalDate.of(2020, 2, 29))
