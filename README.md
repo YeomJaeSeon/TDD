@@ -12,3 +12,6 @@
 
 ## chapter05
 - [정리 및 느낀점](https://github.com/YeomJaeSeon/TDD/blob/main/src/summary/chap05/chap05_summary.md)
+
+## chapter06
+- [정리 및 느낀점](https://github.com/YeomJaeSeon/TDD/blob/main/src/summary/chap06/chap06_summary.md)
